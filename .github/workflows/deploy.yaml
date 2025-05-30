@@ -2,11 +2,12 @@ name: "Hola mundo"
 on:
   push:
     branches: ["main"]
+
 jobs:
   deploy-codigofacilito:
     runs-on: ubuntu-latest
-    step:
+    steps:
       - uses: actions/checkout@v4
-      - run: echo "Hacemos pull del codigo"
+      - run: echo "Hacemos pull del código"
       - run: echo "Instalamos dependencias"
-      - run: echo "Compilamos el codigo"
+      - run: echo "Compilamos el código"
