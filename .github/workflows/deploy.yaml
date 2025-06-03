@@ -1,13 +1,17 @@
-name: "Hola mundo"
-on:
-  push:
-    branches: ["main"]
+name: Deploy to server
 
+on: push # Trigger the workflow on push events
 jobs:
-  deploy-codigofacilito:
-    runs-on: ubuntu-latest
+  first_jobs:
+    runs-on: ubuntu-latest # Use the latest Ubuntu runner
     steps:
-      - uses: actions/checkout@v4
-      - run: echo "Hacemos pull del código"
-      - run: echo "Instalamos dependencias"
-      - run: echo "Compilamos el código"
+      - name: Hola mundo
+        run: echo "Hola mundo desde el primer job"
+
+
+  second_jobs:
+    runs-on: ubuntu-latest # Use the latest Ubuntu runner
+    steps:
+      - name: Hola mundo 2
+        run: echo "Hola mundo desde el primer job"      
+        
