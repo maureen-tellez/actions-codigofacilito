@@ -10,6 +10,7 @@ jobs:
 
 
   second_jobs:
+    needs: first_jobs # This job depends on the completion of first_jobs
     runs-on: ubuntu-latest # Use the latest Ubuntu runner
     steps:
       - name: Hola mundo 2
